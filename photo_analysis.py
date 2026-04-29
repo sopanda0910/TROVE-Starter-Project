@@ -26,8 +26,11 @@ for name in names:
 
 # Sorting based on dt
 times = list(set(clean_data['dt'].array))
+# KN_KS is KN to KN-in-SN
 corr_KN_KS = {}
+# KN_SK is KN to super-KN
 corr_KN_SK = {}
+# KS_SK is KN-in-SN to super-KN
 corr_KS_SK = {}
 
 def get_correlation_data():
