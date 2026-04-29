@@ -52,7 +52,7 @@ def plot():
     plt.legend()
     plt.title('Correlation between phot_KN and phot_KN-in-SN over time')
     plt.tight_layout()
-    plt.savefig('./out/KN_KS_Correlation.jpg')
+    plt.savefig('./out/figs/KN_KS_Correlation.jpg')
 
     plt.figure(figsize=(10,8))
     plt.plot(times, corr_KN_SK, 'kx')
@@ -62,7 +62,7 @@ def plot():
     plt.legend()
     plt.title('Correlation between phot_KN and phot_Super-KN over time')
     plt.tight_layout()
-    plt.savefig('./out/KN_SK_Correlation.jpg')
+    plt.savefig('./out/figs/KN_SK_Correlation.jpg')
 
     plt.figure(figsize=(10,8))
     plt.plot(times, corr_KS_SK, 'kx', label='Data')
@@ -72,7 +72,7 @@ def plot():
     plt.ylabel('Pearson Correlation')
     plt.title('Correlation between phot_KN-in-SN and phot_super-KN over time')
     plt.tight_layout()
-    plt.savefig('./out/KS_SK_Correlation.jpg')
+    plt.savefig('./out/figs/KS_SK_Correlation.jpg')
 
 get_correlation_data()
 plot()
