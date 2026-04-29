@@ -12,5 +12,6 @@ relevant_data_unfiltered = full_data[['2D', 'dist', 'phot_KN', 'phot_KN-in-SN', 
 
 corr_matrix = relevant_data.corr()
 corr_matrix_unfiltered = relevant_data_unfiltered.corr()
-print(corr_matrix)
-print(corr_matrix_unfiltered)
+
+corr_matrix.to_csv('filtered_correlations.csv')
+corr_matrix_unfiltered.to_csv('unfiltered_correlations.csv')
