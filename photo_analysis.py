@@ -39,9 +39,9 @@ def get_correlation_data():
     for i in range(0, rows_count, bin_size):
         subset = clean_data.iloc[i:i+bin_size]
         times.append(subset['dt'].mean())
-        corr_KN_KS.append(subset['phot_KN'].corr(subset['phot_KN-in-SN']))
-        corr_KN_SK.append(subset['phot_KN'].corr(subset['phot_super-KN']))
-        corr_KS_SK.append(subset['phot_KN-in-SN'].corr(subset['phot_super-KN']))
+        corr_KN_KS.append(subset['phot_KN'].corr(subset['phot_KN-in-SN'], method='spearman'))
+        corr_KN_SK.append(subset['phot_KN'].corr(subset['phot_super-KN'], method='spearman'))
+        corr_KS_SK.append(subset['phot_KN-in-SN'].corr(subset['phot_super-KN'], method='spearman'))
 
 def plot():
     plt.figure(figsize=(10,8))
